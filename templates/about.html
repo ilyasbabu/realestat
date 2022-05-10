@@ -1,10 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
-    <title>Kerala Real Property | {{ title }}</title>
+    <title>Kerala real property | About</title>
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
@@ -38,34 +37,28 @@
                                 </ul>
                             </div>
                         </div>
-
                         <!--Top Right-->
                         <div class="top-right clearfix">
                             <ul class="links clearfix">
                                 <li><a href="#"><span class="icon flaticon-message"></span>Email us at :
-                                        sales@yourwebsite.com</a></li>
-                                <li><span class="icon fa fa-phone"></span>1-800-555-1234</li>
+                                        info@keralarealproperty.com</a></li>
+                                <li><span class="icon fa fa-phone"></span>+91 9105121212</li>
                             </ul>
                         </div>
-
                     </div>
-
                 </div>
             </div>
             <!-- Header Top End -->
-
             <!-- Main Box -->
             <div class="main-box">
                 <div class="auto-container">
                     <div class="outer-container clearfix">
                         <!--Logo Box-->
                         <div class="logo-box">
-                            <div class="logo"><a href="/"><img src="{% static 'images/logo-2.png' %}" alt="kerala real property logo"></a></div>
+                            <div class="logo"><a href="/"><img src="{% static 'images/logo-2.png' %}" alt=""></a></div>
                         </div>
-
                         <!--Nav Outer-->
                         <div class="nav-outer clearfix">
-
                             <!-- Main Menu -->
                             <nav class="main-menu">
                                 <div class="navbar-header">
@@ -77,20 +70,15 @@
                                         <span class="icon-bar"></span>
                                     </button>
                                 </div>
-
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li class=""><a href="/">Home</a>
-                                        </li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li class="current dropdown"><a href="#">Properties</a>
-                                        </li>
-                                        <li><a href="contact.html">Contact us</a></li>
+                                        <li class="dropdown"><a href="/">Home</a></li>
+                                        <li class="current"><a href="/about">About Us</a></li>
+                                        <li><a href="/contact">Contact us</a></li>
                                     </ul>
                                 </div>
                             </nav>
                             <!-- Main Menu End-->
-
                             <!--Search Box-->
                             <div class="search-box-outer">
                                 <div class="dropdown">
@@ -101,7 +89,7 @@
                                         <li class="panel-outer">
                                             <div class="form-container">
                                                 <form method="post"
-                                                    action="search/">
+                                                    action="http://html.efforttech.com/html/shina-realstate/blog.html">
                                                     <div class="form-group">
                                                         <input type="search" name="field-name" value=""
                                                             placeholder="Search Here" required>
@@ -114,10 +102,8 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                         <!--Nav Outer End-->
-
                     </div>
                 </div>
             </div>
@@ -144,195 +130,160 @@
                             </div>
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="/">Home</a>
+                                    <li class="dropdown"><a href="#">Home</a>
                                     </li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li class="current dropdown"><a href="#">Properties</a>
-                                    </li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li class="current"><a href="/about">About Us</a></li>
+                                    <li><a href="/contact">Contact us</a></li>
                                 </ul>
                             </div>
                         </nav><!-- Main Menu End-->
                     </div>
-
                 </div>
             </div>
             <!--End Sticky Header-->
-
         </header>
         <!--End Main Header -->
-
         <!--Page Title-->
-        {% if 'Vehicle' in title %}
-        <section class="page-title" style="background-image:url({% static 'images/background/8.jpg' %})">
-        {% else %}
         <section class="page-title" style="background-image:url({% static 'images/background/6.jpg' %})">
-        {% endif %}
             <div class="auto-container">
                 <div class="clearfix">
                     <div class="pull-left">
-                        {% if 'Vehicle' in title %}
-                        <h1>Vehicles</h1>
-                        {% else %}
-                        <h1>Properties</h1>
-                        {% endif %}
+                        <h1>About Us</h1>
                     </div>
                     <div class="pull-right">
                         <ul class="page-breadcrumb">
                             <li><a href="/">Home</a></li>
-                            <li>Properties</li>
+                            <li>About us</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
         <!--End Page Title-->
-
-        <!--Property Grid Section-->
-        <section class="property-grid-section">
+        <!--About Section-->
+        <section class="about-section" style="background-image:url({% static 'images/background/7.jpg' %})">
             <div class="auto-container">
-
                 <div class="row clearfix">
-                    {% for i in prop %}
-                    <!--Property Block-->
-                    <div class="property-block col-md-4 col-sm-6 col-xs-12">
-                        <div class="inner-box">
-                            <div class="image">
-                                <style>
-                                    .coverim{{ i.id }} {
-                                        height: 230px;
-                                        background-image: url("{{i.main_image.url}}");
-                                        background-size: cover;
-                                    }
-                                </style>
-                                {% if 'Vehicle' in title %}
-                                <a href="/detail/vehicle/{{ i.id }}">
-                                {% else %}
-                                <a href="/detail/property/{{ i.id }}">
-                                {% endif %}
-                                <div class="coverim{{ i.id }}">
-                                </div>
-                                </a>
-                                <div class="sale">{{ i.purpose }}</div>
-                                <div class="price">₹ {{ i.price }}</div>
+                    <!--Content Column-->
+                    <div class="content-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="inner-column">
+                            <!--Sec Title-->
+                            <div class="sec-title">
+                                <div class="title">About Shina</div>
+                                <h2>Who We Are</h2>
+                                <div class="separator"></div>
                             </div>
-                            <div class="lower-content">
-                                <div class="upper-box">
-                                    <h3>
-                                        {% if 'Vehicle' in title %}
-                                        <a href="/detail/vehicle/{{ i.id }}">
-                                        {% else %}
-                                        <a href="/detail/property/{{ i.id }}">
-                                        {% endif %}
-                                        {{ i.name }}</a></h3>
-                                    <div class="location">{{ i.locality }}</div>
-                                    <div class="text">{{ i.description | truncatewords:5 }}</div>
-                                </div>
-                                <div class="lower-box clearfix">
-                                    <div class="pull-left">
-                                        <ul>{% if i.bedrooms %}
-                                            <li><span class="icon flaticon-bed-1"></span>0{{ i.bedrooms }}</li>
-                                            {% endif %}
-                                            {% if i.bathrooms %}
-                                            <li><span class="icon flaticon-bathtube-with-shower"></span>0{{ i.bathrooms }}</li>
-                                            {% endif %}
-                                            {% if i.kilometers %}
-                                            <li><span class="icon" ><img src="{% static 'icons/speedometer.png' %}" alt=""></span>{{ i.kilometers }} km</li>
-                                            {% endif %}
-                                            {% if i.fuel %}
-                                            <li><span class="icon"><img src="{% static 'icons/gasoline-pump.png' %}" alt=""></span>{{ i.fuel }}</li>
-                                            {% endif %}
-                                            
-                                        </ul>
-                                    </div>
-                                    <div class="pull-right">
-                                        <ul>{% if i.buildin_area %}
-                                            <li><span class="icon flaticon-squares"></span>{{ i.buildin_area }}</li>
-                                            {% endif %}
-                                            {% if i.reg_year %}
-                                            <li><span class="icon"><img src="{% static 'icons/edit.png' %}" alt=""></span>{{ i.reg_year }} model</li>
-                                            {% endif %}
-                                        </ul>
-                                    </div>
-                                </div>
+                            <div class="bold-text">Shina is a premium WordPress theme for real estate agents where
+                                modern aesthetics are combined with tasteful simplicity and where the ease of use is
+                                achieved without compromise in your ability to customise the design.</div>
+                            <div class="text">
+                                <p>Whether you are a real estate agent looking to build a website for your company or a
+                                    web developer seeking a perfect WordPress theme for your next project, you are
+                                    certain to appreciate the numerous features and benefits that our theme provides.
+                                </p>
+                                <p>This is not a theme that only takes care of the front of a real estate business. This
+                                    is also a WordPress-based property management system which allows you to own and
+                                    maintain a real estate marketplace, coordinate your agents, accept submissions and
+                                    offer membership packages.</p>
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
+                    <!--Image Column-->
+                    <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="image">
+                            <img src="{% static 'images/resource/about.jpg' %}" alt="" />
+                        </div>
+                    </div>
                 </div>
-
-                <!--Styled Pagination-->
-                <ul class="styled-pagination text-center">
-                    <li><a href="#" class="active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li class="next"><a href="#">Next</a></li>
-                </ul>
-                <!--End Styled Pagination-->
-
             </div>
         </section>
-        <!--End Property Grid Section-->
-
-        <!--Clients Section-->
-        <section class="clients-section grey-bg">
+        <!--End About Section-->
+        <!--Services Section-->
+        <section class="services-section style-two">
             <div class="auto-container">
-
-                <div class="sponsors-outer">
-                    <!--Sponsors Carousel-->
-                    <ul class="sponsors-carousel owl-carousel owl-theme">
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/1.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/2.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/3.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/4.png" alt=""></a></figure>
-                        </li>
-                        <li class="slide-item">
-                            <figure class="image-box"><a href="#"><img src="images/clients/5.png" alt=""></a></figure>
-                        </li>
-                    </ul>
+                <!--Sec Title-->
+                <div class="sec-title centered">
+                    <div class="title">We are Offering the Best Real Estate</div>
+                    <h2>Property Services</h2>
+                    <div class="separator"></div>
                 </div>
-
+                <div class="row clearfix">
+                    <!--Services Block-->
+                    <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <span class="icon flaticon-house-1"></span>
+                            </div>
+                            <h3><a href="#">Homes For Sale</a></h3>
+                            <div class="text">Here are the beautiful homes that are <br> available for sale.</div>
+                        </div>
+                    </div>
+                    <!--Services Block-->
+                    <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <span class="icon flaticon-house-2"></span>
+                            </div>
+                            <h3><a href="#">Homes For Rent</a></h3>
+                            <div class="text">Comfortable & Luxury homes are <br> available for rent.</div>
+                        </div>
+                    </div>
+                    <!--Services Block-->
+                    <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <span class="icon flaticon-internet"></span>
+                            </div>
+                            <h3><a href="#">Homes For Mortgage</a></h3>
+                            <div class="text">Homes at the point of using normal <br> distribution of letters.</div>
+                        </div>
+                    </div>
+                    <!--Services Block-->
+                    <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <span class="icon flaticon-hand-shake"></span>
+                            </div>
+                            <h3><a href="#">Matching Buyer</a></h3>
+                            <div class="text">Buyers of the Properties are available <br> with us.</div>
+                        </div>
+                    </div>
+                    <!--Services Block-->
+                    <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <span class="icon flaticon-analytics"></span>
+                            </div>
+                            <h3><a href="#">Price Analysis</a></h3>
+                            <div class="text">Buyers of the Properties are available <br> with us.</div>
+                        </div>
+                    </div>
+                    <!--Services Block-->
+                    <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="icon-box">
+                                <span class="icon flaticon-house-3"></span>
+                            </div>
+                            <h3><a href="#">Homes On Lease</a></h3>
+                            <div class="text">Buyers of the Properties are available <br> with us.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <!--End Clients Section-->
-
+        <!--End Services Section-->
         <!--Footer Style Two-->
         <footer class="footer-style-two">
             <div class="auto-container">
-
                 <!--Upper Box-->
                 <div class="upper-box">
                     <div class="row clearfix">
-
                         <!--Logo Column-->
                         <div class="logo-column col-lg-3 col-md-12 col-sm-12 col-xs-12">
                             <div class="logo">
                                 <a href="/"><img src="{% static 'images/logo.png' %}" alt="" /></a>
                             </div>
                         </div>
-
                         <!--form Column-->
                         <div class="form-column col-lg-5 col-md-6 col-sm-6 col-xs-12">
                             <form method="post" action="http://html.efforttech.com/html/shina-realstate/contact.html">
@@ -342,7 +293,6 @@
                                 </div>
                             </form>
                         </div>
-
                         <!--Social Column-->
                         <div class="social-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
                             <ul class="social-icon-two">
@@ -353,18 +303,14 @@
                                 <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
-
                 <!--Widgets Section-->
                 <div class="widgets-section">
                     <div class="row clearfix">
-
                         <!--big column-->
                         <div class="big-column col-md-7 col-sm-12 col-xs-12">
                             <div class="row clearfix">
-
                                 <!--Footer Column-->
                                 <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                     <div class="footer-widget touch-widget">
@@ -375,40 +321,36 @@
                                             aesthetics are combined with tasteful simplicity.</div>
                                     </div>
                                 </div>
-
                                 <!--Footer Column-->
                                 <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                                     <div class="footer-widget post-widget">
                                         <h2>Popular Posts</h2>
                                         <article class="post">
-                                            <figure class="post-thumb"><img src="images/resource/post-thumb-1.jpg"
-                                                    alt=""><a class="overlay" href="blog-single.html"></a></figure>
-                                            <div class="text"><a href="blog-single.html">Modern Design Building </a>
+                                            <figure class="post-thumb"><img src="{% static 'images/resource/post-thumb-1.jpg' %}"
+                                                    alt=""><a class="overlay" href="blog-detail.html"></a></figure>
+                                            <div class="text"><a href="blog-detail.html">Modern Design Building </a>
                                             </div>
                                             <div class="post-info">1 October, 2017</div>
                                         </article>
                                         <article class="post">
-                                            <figure class="post-thumb"><img src="images/resource/post-thumb-2.jpg"
-                                                    alt=""><a class="overlay" href="blog-single.html"></a></figure>
-                                            <div class="text"><a href="blog-single.html">Real Eatate Expo 2018</a></div>
+                                            <figure class="post-thumb"><img src="{% static 'images/resource/post-thumb-2.jpg' %}"
+                                                    alt=""><a class="overlay" href="blog-detail.html"></a></figure>
+                                            <div class="text"><a href="blog-detail.html">Real Eatate Expo 2018</a></div>
                                             <div class="post-info">10 October, 2017</div>
                                         </article>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                         <!--big column-->
                         <div class="big-column col-md-5 col-sm-12 col-xs-12">
                             <div class="row clearfix">
-
                                 <!--Footer Column-->
                                 <div class="footer-column col-md-5 col-sm-6 col-xs-12">
                                     <div class="footer-widget links-widget">
                                         <h2>links</h2>
                                         <ul class="links">
-                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="/about">About Us</a></li>
                                             <li><a href="#">Blog</a></li>
                                             <li><a href="#">Blog Grid</a></li>
                                             <li><a href="#">Contact</a></li>
@@ -416,7 +358,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
                                 <!--Footer Column-->
                                 <div class="footer-column col-md-7 col-sm-6 col-xs-12">
                                     <div class="footer-widget links-widget">
@@ -429,56 +370,21 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
             <!--Footer Bottom-->
             <div class="footer-bottom">
                 <div class="copyright">&copy; Copyright 2022 All rights reserved – Design By Dolab</div>
             </div>
-
         </footer>
         <!--End Main Footer-->
-
     </div>
     <!--End pagewrapper-->
-
     <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
-
-    <!-- Color Palate / Color Switcher -->
-    <div class="color-palate">
-        <div class="color-trigger">
-            <i class="fa fa-gear"></i>
-        </div>
-        <div class="color-palate-head">
-            <h6>Choose Your Color</h6>
-        </div>
-        <div class="various-color clearfix">
-            <div class="colors-list">
-                <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
-                <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
-                <span class="palate pink-color" data-theme-file="css/color-themes/pink-theme.css"></span>
-                <span class="palate navy-color" data-theme-file="css/color-themes/navy-theme.css"></span>
-                <span class="palate blue-color" data-theme-file="css/color-themes/blue-theme.css"></span>
-                <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
-                <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
-                <span class="palate red-color" data-theme-file="css/color-themes/red-theme.css"></span>
-            </div>
-        </div>
-
-        <div class="palate-foo">
-            <span>You can easily change and switch the colors.</span>
-        </div>
-
-    </div>
-    <!-- /.End Of Color Palate -->
-
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>    
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.fancybox.js' %}"></script>
@@ -489,7 +395,5 @@
     <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/color-settings.js' %}"></script>
 </body>
-
-<!-- Mirrored from html.efforttech.com/html/shina-realstate/property-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Apr 2022 07:25:25 GMT -->
 
 </html>
